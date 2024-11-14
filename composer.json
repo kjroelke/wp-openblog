@@ -1,0 +1,19 @@
+{
+	"name": "kjroelke/wordpress-site-plugin",
+	"description": "A simple plugin edit my site with",
+	"type": "project",
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"scripts": {
+		"phpcs": "phpcs wp-content/themes/kjroelke/ --extensions=php --ignore=wp-content/themes/kjroelke/dist/",
+		"phpcbf": "phpcbf wp-content/themes/kjroelke/ --extensions=php --ignore=wp-content/themes/kjroelke/dist/"
+	},
+	"require-dev": {
+		"wp-coding-standards/wpcs": "*",
+		"php-stubs/acf-pro-stubs": "^6.2"
+	}
+}
